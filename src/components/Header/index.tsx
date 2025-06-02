@@ -1,22 +1,137 @@
+"use client";
+
 import { Button } from "../ui/button";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [spacerHeight, setSpacerHeight] = useState(0);
+  const [initialHeaderOffsetTop, setInitialHeaderOffsetTop] = useState(0);
+  const headerElementRef = useRef<HTMLElement>(null);
+  const staticHeaderRef = useRef<HTMLDivElement>(null); // Ref for the non-sticky header
+
+  useEffect(() => {
+    // Use the static header for initial dimension calculations
+    if (staticHeaderRef.current) {
+      const styles = getComputedStyle(staticHeaderRef.current);
+      const marginTop = parseFloat(styles.marginTop);
+      const calculatedHeight = staticHeaderRef.current.offsetHeight;
+      setSpacerHeight(calculatedHeight);
+      // Calculate initial offset top based on the wrapper div of the static header
+      // to ensure it's relative to the document flow before any sticky behavior.
+      let cumulativeOffsetTop = staticHeaderRef.current.offsetTop;
+      let currentElement = staticHeaderRef.current.offsetParent as HTMLElement;
+      while (currentElement) {
+        cumulativeOffsetTop += currentElement.offsetTop;
+        currentElement = currentElement.offsetParent as HTMLElement;
+      }
+      setInitialHeaderOffsetTop(cumulativeOffsetTop - marginTop); // Adjust for its own margin
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (initialHeaderOffsetTop > 0) {
+        setIsScrolled(window.scrollY > initialHeaderOffsetTop);
+      } else {
+        // Fallback if initialHeaderOffsetTop isn't set, similar to before
+        setIsScrolled(window.scrollY > 10);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [initialHeaderOffsetTop]);
+
+  const headerBaseClasses =
+    "w-[90%] h-[120px] rounded-[20px] border border-solid flex items-center justify-between px-10";
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: { duration: 0.2, ease: "easeInOut" },
+    },
+  };
+
   return (
-    <header className="absolute w-[1775px] h-[120px] top-[27px] left-[72px] rounded-[20px] border border-solid border-white flex items-center justify-between px-10">
-      <div className="flex items-center gap-3">
-        <img
-          className="w-[29px] h-[53px]"
-          alt="Midjournal Logo"
-          src="/vector-2.svg"
-        />
-        <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-[40px]">
-          Midjournal
-        </h1>
+    <>
+      <div
+        ref={staticHeaderRef}
+        style={{ height: isScrolled ? `${spacerHeight}px` : "auto" }}
+        className={`${headerBaseClasses} relative mx-auto my-7 bg-white border-white ${
+          isScrolled ? "invisible" : "visible" // Hide static header when sticky is active
+        }`}
+      >
+        {/* Static header content - duplicated for layout calculation, hidden when sticky */}
+        <div className="flex items-center gap-3 bg-blue-100">
+          <img
+            className="w-[21px] h-[21px] sm:w-[44px] sm:h-[44px]"
+            alt="Midjournal logo"
+            src="/midjournal-logo--black-2.png"
+          />
+          <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-xl sm:text-[40px]">
+            Midjournal
+          </h1>
+        </div>
+        <Button
+          onClick={() => {
+            document.getElementById("early-access")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className="w-[148.5px] h-[42.75px] sm:w-[198px] sm:h-[57px] bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-md sm:text-xl"
+        >
+          EARLY ACCESS
+        </Button>
       </div>
-      <Button className="w-[198px] h-[57px] bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-xl">
-        EARLY ACCESS
-      </Button>
-    </header>
+
+      <AnimatePresence>
+        {isScrolled && (
+          <motion.header
+            key="sticky-header" // Important for AnimatePresence to track the element
+            ref={headerElementRef} // Ref for the sticky header if needed, though layout is handled by static
+            className={`${headerBaseClasses} fixed top-7 left-1/2 transform -translate-x-1/2 z-50 bg-white/80 backdrop-blur-[6px] shadow-lg border-gray-200`}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={headerVariants}
+            // layout // Potentially enable if complex layout shifts occur, but can be costly
+          >
+            <div className="flex items-center gap-3">
+              <img
+                className="w-[21px] h-[21px] sm:w-[44px] sm:h-[44px]"
+                alt="Midjournal logo"
+                src="/midjournal-logo--black-2.png"
+              />
+              <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-xl sm:text-[40px]">
+                Midjournal
+              </h1>
+            </div>
+            <Button
+              onClick={() => {
+                document.getElementById("early-access")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              className="w-[198px] h-[57px] bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-xl"
+            >
+              EARLY ACCESS
+            </Button>
+          </motion.header>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

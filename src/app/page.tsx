@@ -1,4 +1,4 @@
-import { Desktop } from "@/screens/Desktop";
+import { Desktop } from "@/screens";
 
 export default function Home() {
   return <Desktop />;

@@ -2,15 +2,15 @@ import React from "react";
 
 const Description = () => {
   return (
-    <section className="absolute top-[1369px] left-[1037px] flex flex-col gap-6">
-      <h2 className="w-[691px] h-28 [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-[50px]">
+    <section className="relative w-full max-w-3xl mx-auto my-10 px-4 flex flex-col gap-6">
+      <h2 className="w-full h-auto [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-4xl md:text-5xl">
         We&apos;re building a smart journal that{" "}
         <span className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_SemiLight-Italic',Helvetica] italic">
           reflects you
         </span>
       </h2>
 
-      <div className="w-[714px] [font-family:'Inter',Helvetica] font-normal text-black text-xl">
+      <div className="w-full [font-family:'Inter',Helvetica] font-normal text-black text-lg md:text-xl">
         <p>
           Every journal entry shows you how you feel: not just in words, but as
           a living visual — creating an informative 3D gallery of your emotional
