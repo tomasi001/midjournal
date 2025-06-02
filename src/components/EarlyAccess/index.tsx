@@ -7,7 +7,7 @@ const EarlyAccess = () => {
   return (
     <section
       id="early-access"
-      className="relative w-full max-w-3xl mx-auto my-10 scroll-mt-[100px]"
+      className="relative w-full max-w-3xl mx-auto my-10 scroll-mt-[130px] sm:scroll-mt-[160px]"
     >
       <Card
         className="w-full h-auto rounded-[20px] py-10 px-4 md:px-0"
@@ -21,9 +21,9 @@ const EarlyAccess = () => {
             Early access
           </h2>
 
-          <div className="flex flex-col sm:flex-row items-center w-full max-w-2xl h-auto sm:h-[71px] bg-white rounded-[10px] p-2 sm:p-0">
+          <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-2xl h-auto sm:h-[71px] bg-white rounded-[10px] p-2 sm:p-0 ">
             <Input
-              className="h-[50px] sm:h-[71px] w-full border-none pl-4 sm:pl-6 [font-family:'Inter',Helvetica] font-normal text-[#00000063] text-sm sm:text-base"
+              className="h-[46px] sm:h-[54px] w-[98%] sm:w-full sm:mx-2 border-none pl-4 sm:pl-6 [font-family:'Inter',Helvetica] font-normal text-[#00000063] text-sm sm:text-base"
               placeholder="Email"
             />
             <Button className="w-full sm:w-[193px] h-[50px] sm:h-[58px] mt-2 sm:mt-0 sm:mr-1.5 bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-lg sm:text-xl">
