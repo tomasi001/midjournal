@@ -2,33 +2,27 @@ import {
   Description,
   EarlyAccess,
   Faq,
-  Footer,
-  Header,
   Hero,
   JournalCards,
 } from "@/components";
 
 export const Home = () => {
   return (
-    <main className="bg-white flex flex-row justify-center w-screen">
-      <div className="bg-whites w-screen relative">
-        <Header />
-        <Hero />
-        <div className="flex flex-col 2xl:flex-row justify-center items-center 2xl:items-start w-[92%] mx-auto py-12 md:py-16 gap-x-8">
-          <div className="w-full">
-            <JournalCards />
-          </div>
+    <div>
+      <Hero />
+      <div className="flex flex-col 2xl:flex-row justify-center items-center 2xl:items-start w-[92%] mx-auto py-12 md:py-16 gap-x-8">
+        <div className="w-full">
+          <JournalCards />
+        </div>
 
-          <div className="w-full">
-            <Description />
-          </div>
+        <div className="w-full">
+          <Description />
         </div>
-        <div className="flex flex-col justify-center items-center w-[92%] mx-auto">
-          <EarlyAccess />
-          <Faq />
-        </div>
-        <Footer />
       </div>
-    </main>
+      <div className="flex flex-col justify-center items-center w-[92%] mx-auto">
+        <EarlyAccess />
+        <Faq />
+      </div>
+    </div>
   );
 };
