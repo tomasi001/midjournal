@@ -74,7 +74,7 @@ const Header = () => {
         }`}
       >
         {/* Static header content - duplicated for layout calculation, hidden when sticky */}
-        <div className="flex items-center gap-3 bg-blue-100">
+        <div className="flex items-center gap-3">
           <img
             className="w-[21px] h-[21px] sm:w-[44px] sm:h-[44px]"
             alt="Midjournal logo"
