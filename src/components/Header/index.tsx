@@ -48,7 +48,7 @@ const Header = () => {
   }, [initialHeaderOffsetTop]);
 
   const headerBaseClasses =
-    "w-[90%] h-[120px] rounded-[20px] border border-solid flex items-center justify-between px-10";
+    "w-[90%] h-[80px] sm:h-[120px] rounded-[20px] border border-solid flex items-center justify-between px-4 sm:px-10";
 
   const headerVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -101,7 +101,7 @@ const Header = () => {
           <motion.header
             key="sticky-header" // Important for AnimatePresence to track the element
             ref={headerElementRef} // Ref for the sticky header if needed, though layout is handled by static
-            className={`${headerBaseClasses} fixed top-7 left-1/2 transform -translate-x-1/2 z-50 bg-white/80 backdrop-blur-[6px] shadow-lg border-gray-200`}
+            className={`${headerBaseClasses} fixed top-2 sm:top-7 left-1/2 transform -translate-x-1/2 z-50 bg-white/80 backdrop-blur-[6px] shadow-lg border-gray-200`}
             initial="hidden"
             animate="visible"
             exit="exit"

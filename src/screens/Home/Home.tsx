@@ -8,10 +8,10 @@ import {
   JournalCards,
 } from "@/components";
 
-export const Desktop = () => {
+export const Home = () => {
   return (
     <main className="bg-white flex flex-row justify-center w-screen">
-      <div className="bg-white w-screen relative">
+      <div className="bg-whites w-screen relative">
         <Header />
         <Hero />
         <div className="flex flex-col 2xl:flex-row justify-center items-center 2xl:items-start w-[92%] mx-auto py-12 md:py-16 gap-x-8">
