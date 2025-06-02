@@ -124,7 +124,7 @@ const Header = () => {
                   behavior: "smooth",
                 });
               }}
-              className="w-[198px] h-[57px] bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-xl"
+              className="w-[148.5px] h-[42.75px] sm:w-[198px] sm:h-[57px] bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-md sm:text-xl"
             >
               EARLY ACCESS
             </Button>
