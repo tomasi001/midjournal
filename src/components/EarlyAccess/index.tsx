@@ -4,16 +4,15 @@ import React, { useState } from "react";
 import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { toast } from "sonner";
 
 const EarlyAccess = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setMessage("");
 
     try {
       const res = await fetch("/api/early-access", {
@@ -27,14 +26,16 @@ const EarlyAccess = () => {
       const data = await res.json();
 
       if (res.ok) {
-        setMessage("Success! Please check your email.");
+        toast.success("Success! Please check your email for a confirmation.");
         setEmail("");
+      } else if (res.status === 409) {
+        toast.warning(data.message || "This email is already on the list.");
       } else {
-        setMessage(data.message || "Something went wrong. Please try again.");
+        toast.error(data.message || "Something went wrong. Please try again.");
       }
     } catch (error) {
+      toast.error("An error occurred. Please try again later.");
       console.error(error);
-      setMessage("An error occurred. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -77,12 +78,6 @@ const EarlyAccess = () => {
               {loading ? "APPLYING..." : "APPLY"}
             </Button>
           </form>
-
-          {message && (
-            <p className="w-full max-w-md mt-4 text-white text-sm text-center">
-              {message}
-            </p>
-          )}
 
           <p className="w-full max-w-md mt-6 [font-family:'Inter',Helvetica] font-normal text-white text-xs text-center px-4 sm:px-0">
             By hitting &quot;APPLY&quot; you agree to be contacted via email
