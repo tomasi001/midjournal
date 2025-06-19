@@ -78,7 +78,7 @@ const Header = () => {
           <img
             className="w-[21px] h-[21px] sm:w-[44px] sm:h-[44px]"
             alt="Midjournal logo"
-            src="/midjournal-logo--black-2.png"
+            src="/midjournal-logo-black.png"
           />
           <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-xl sm:text-[40px]">
             Midjournal
@@ -112,7 +112,7 @@ const Header = () => {
               <img
                 className="w-[21px] h-[21px] sm:w-[44px] sm:h-[44px]"
                 alt="Midjournal logo"
-                src="/midjournal-logo--black-2.png"
+                src="/midjournal-logo-black.png"
               />
               <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-xl sm:text-[40px]">
                 Midjournal

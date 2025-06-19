@@ -7,7 +7,7 @@ const Footer = () => {
       <img
         className="w-[44px] h-[44px] sm:w-[112px] sm:h-[112px] mb-8 sm:mb-16"
         alt="Midjournal logo"
-        src="/midjournal-logo--black-2.png"
+        src="/midjournal-logo-black.png"
       />
 
       <p className="w-full max-w-xl mb-4 sm:max-w-2xl h-auto mt-[-20px] sm:mt-[-34px] [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-xl sm:text-6xl text-center">
