@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 const Hero = () => {
@@ -10,6 +11,11 @@ const Hero = () => {
         className="w-[63px] h-[63px] mt-10"
         alt="Down button"
         src="/down-button.png"
+        onClick={() => {
+          document.getElementById("early-access")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }}
       />
     </section>
   );

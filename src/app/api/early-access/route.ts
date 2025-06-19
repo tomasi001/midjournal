@@ -2,8 +2,22 @@ import { NextRequest, NextResponse } from "next/server";
 import path from "path";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { JWT } from "google-auth-library";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 import { MailOptions, sendMail } from "@/mail";
 import welcomeTemplate from "@/mail/templates/welcomeTemplate";
+
+const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL!,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+});
+
+const ratelimit = new Ratelimit({
+  redis,
+  limiter: Ratelimit.slidingWindow(5, "10 s"),
+  analytics: true,
+  prefix: "@upstash/ratelimit",
+});
 
 const serviceAccountAuth = new JWT({
   email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
@@ -51,9 +65,18 @@ const appendToSheet = async (email: string, ip: string, userAgent: string) => {
 };
 
 export async function POST(req: NextRequest) {
+  const ip = req.headers.get("x-forwarded-for") ?? "127.0.0.1";
+  const { success } = await ratelimit.limit(ip);
+
+  if (!success) {
+    return NextResponse.json(
+      { message: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   try {
     const { email } = await req.json();
-    const ip = req.headers.get("x-forwarded-for") ?? "Unknown";
     const userAgent = req.headers.get("user-agent") || "Unknown";
 
     if (!email) {
