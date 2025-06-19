@@ -53,18 +53,18 @@ export const faqItems = [
     id: "item-1",
     question: "When is Midjournal getting officially released?",
     answer:
-      "We'll be using early access users to fine tune certain features and should be ready with a public beta version by August 2025",
+      "We’ll be using early access users to fine tune certain features and should be ready with a public beta version by the end of 2025",
   },
   {
     id: "item-2",
     question: "How do I make a journal entry on Midjournal?",
     answer:
-      "For our first version of Midjournal we're working on 3 ways to make a journal entry: Typing, voice recording and image-to-text (allowing users to simply take a photograph of their hardcopy journals and upload)",
+      "For our first version of Midjournal we’re working on 3 ways to make a journal entry: Typing, voice recording and image-to-text (allowing users to simply take a photograph of their hardcopy journals and upload)",
   },
   {
     id: "item-3",
     question: "Are my journal entries still only seen by me?",
     answer:
-      "Absolutely. Privacy and data sovereighnty is essential for us. All data is encrypted meaning although the app can generate insights from your journal entry, we won't be able to see it - or anyone else for that matter!",
+      "Absolutely. Privacy and data sovereignty is essential to us. All data is encrypted meaning although the app can generate insights from your journal entry, we won’t be able to see it - or anyone else for that matter!",
   },
 ];

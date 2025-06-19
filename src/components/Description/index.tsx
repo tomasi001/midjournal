@@ -4,35 +4,40 @@ const Description = () => {
   return (
     <section className="relative w-full max-w-3xl mx-auto my-10 px-4 flex flex-col gap-6">
       <h2 className="w-full h-auto [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-4xl md:text-5xl">
-        We&apos;re building a smart journal that{" "}
-        <span className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_SemiLight-Italic',Helvetica] italic">
-          reflects you
-        </span>
+        <span className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_SemiLight-Italic',Helvetica] italic font-bold">
+          Level up
+        </span>{" "}
+        how you engage with the world
       </h2>
 
       <div className="w-full [font-family:'Inter',Helvetica] font-normal text-black text-lg md:text-xl">
         <p>
-          Every journal entry shows you how you feel: not just in words, but as
-          a living visual — creating an informative 3D gallery of your emotional
-          world — unfolding over time.
+          By being more self-aware, you can begin to deepen your understanding
+          of the true, cyclical and impermanent nature of emotion – leading to a
+          synchronised, less reactionary and more connected state of being.
         </p>
         <p className="mt-6">
-          <span className="font-bold">A journal evolved</span>, offering
-          insights rooted in the best of modern psychology and eastern wisdom.
-          Drawing from the top academic research and learning with you as you go
-          — we&apos;re building a tool that keeps track of the shifts in your
-          thoughts, moods, and energy and plots these against the cycles of
-          nature&nbsp;&nbsp;— helping you make sense of the the messiness of
+          <span className="font-bold">Go deep.</span>, For centuries journaling
+          has served as a powerful way to increase self-awareness. Now imagine
+          an enriching set of tools that enable you to go deeper, understand
+          yourself better, and take greater responsibility for how you engage
+          with the world.
+        </p>
+        <p className="mt-6">
+          <span className="font-bold">A journal evolved. </span> Guided by the
+          best in modern psychology and eastern wisdom; we&apos;re building a
+          journal that draws from top academic research and learns with you as
+          you go. Keeping track of your thoughts and emotions to reveal patterns
+          and insights – in a way that helps make sense of the messiness of
           life.
-        </p>
-        <p className="mt-6">
-          <span className="font-bold">See what comes to life </span>— we&apos;re
-          guided by raw honesty, grounded in compassion, and driven by the
-          belief that technology should nurture what makes us human. We&apos;re
-          right at the beginning, but the path is clear and we&apos;d love for
-          you to join us on the journey. Apply for{" "}
           <span className="font-bold">early access</span> below and help us
           perfect the first mood-to image model.
+        </p>
+        <p className="mt-6">
+          <span className="font-bold">See how you feel: </span>
+          in words, insights, patterns, and living visuals – all working
+          together to paint an informative and empowering landscape of your
+          inner world –unfolding over time.
         </p>
       </div>
     </section>

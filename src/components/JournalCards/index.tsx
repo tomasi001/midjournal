@@ -100,18 +100,18 @@ const JournalCards = () => {
                 if (card.position === "left") {
                   // Styles for medium cards positioned on the left.
                   cardClasses =
-                    "w-[228px] h-[334px] absolute top-[50px] left-[88px] blur-[3px] z-20";
+                    "w-[220px] h-[334px] absolute top-[50px] left-[88px] blur-[3px] z-20";
                 } else {
                   // Assumes any other position for "medium" cards (e.g., "right") uses these styles.
                   cardClasses =
-                    "w-[228px] h-[334px] absolute top-[53px] left-[478px] blur-[3px] z-20";
+                    "w-[220px] h-[334px] absolute top-[53px] left-[478px] blur-[3px] z-20";
                 }
                 // Common styles for all medium cards, regardless of position.
                 imageClasses = "w-[220px] h-[247px]";
                 scoreCircleClasses =
                   "w-[49px] h-[47px] absolute top-[218px] left-[85px]";
                 scoreFontClasses =
-                  "w-[35px] h-[30px] absolute top-[230px] left-[91px] text-[21.5px]";
+                  "w-[35px] h-[30px] absolute top-[227px] left-[92px] text-[21.5px]";
                 titleFontClasses = "w-[211px] h-[41px] text-[17.9px]";
                 dateFontClasses = "w-[124px] h-[18px] text-[9px]";
                 tapTextClasses = "w-[124px] h-[18px] text-[7.2px]";
@@ -122,18 +122,18 @@ const JournalCards = () => {
                 if (card.position === "far-left") {
                   // Styles for small cards positioned on the far-left.
                   cardClasses =
-                    "w-[161px] h-[232px] absolute top-24 left-0 blur-[4px] z-10";
+                    "w-[153px] h-[232px] absolute top-24 left-0 blur-[4px] z-10";
                 } else {
                   // Assumes any other position for "small" cards (e.g., "far-right") uses these styles.
                   cardClasses =
-                    "w-[161px] h-[232px] absolute top-24 left-[630px] blur-[4px] z-10";
+                    "w-[153px] h-[232px] absolute top-24 left-[630px] blur-[4px] z-10";
                 }
                 // Common styles for all small cards, regardless of position.
                 imageClasses = "w-[153px] h-[172px]";
                 scoreCircleClasses =
-                  "w-[34px] h-8 absolute top-[151px] left-[59px]";
+                  "w-[34px] h-8 absolute top-[154px] left-[59px]";
                 scoreFontClasses =
-                  "w-6 h-[21px] absolute top-[159px] left-16 text-[15px]";
+                  "w-6 h-[21px] absolute top-[159px] left-[63.72px] text-[15px]";
                 // Note: h-3.5 and h-3 are very small heights in Tailwind (0.875rem and 0.75rem respectively).
                 // This might be intentional for very compact text display or could be a point of review if text appears clipped.
                 titleFontClasses = "w-[147px] h-3.5 text-[12.5px]";
@@ -158,12 +158,12 @@ const JournalCards = () => {
                                           using custom shadow definitions with horizontal offset, vertical offset, blur, and color (#00000040 which is black with 25% opacity).
                   */}
                   <CardContent
-                    className={`p-0 ${
+                    className={`p-0 w-full h-full ${
                       card.size === "large"
                         ? "bg-white rounded-[12.32px] shadow-[-4.93px_9.85px_4.93px_#00000040]"
                         : card.size === "medium"
-                        ? "bg-white rounded-[8.97px] shadow-[-3.59px_7.17px_3.59px_#00000040]"
-                        : "bg-white rounded-[6.24px] shadow-[-2.5px_4.99px_2.5px_#00000040]"
+                          ? "bg-white rounded-[8.97px] shadow-[-3.59px_7.17px_3.59px_#00000040]"
+                          : "bg-white rounded-[6.24px] shadow-[-2.5px_4.99px_2.5px_#00000040]"
                     }`}
                   >
                     {/* This div acts as a container for all visual elements within the CardContent. */}
@@ -171,7 +171,7 @@ const JournalCards = () => {
                         This means `absolute` positioning for child elements (like images and text overlays)
                         will be relative to the bounds of this div.
                     */}
-                    <div className="relative">
+                    <div className="relative w-full h-full">
                       {/* Main journal visualization image. */}
                       {/* `imageClasses` (which defines width and height based on card size) is applied.
                           It's also absolutely positioned to the top-left corner of its parent <div className="relative">. */}
@@ -188,8 +188,8 @@ const JournalCards = () => {
                           card.size === "large"
                             ? "w-[21px] h-[21px] top-3 left-[269px]" // Specific style for large cards
                             : card.size === "medium"
-                            ? "w-[15px] h-[15px] top-[9px] left-[195px]" // Specific style for medium cards
-                            : "w-[11px] h-[11px] top-1.5 left-[136px]" // Default style for small cards
+                              ? "w-[15px] h-[15px] top-[9px] left-[195px]" // Specific style for medium cards
+                              : "w-[11px] h-[11px] top-1.5 left-[136px]" // Default style for small cards
                         }`}
                         alt="Enlarge" // Alt text for the icon.
                         src="/enlarge-4.png" // Static image source for the enlarge icon.
@@ -204,8 +204,8 @@ const JournalCards = () => {
                           card.size === "large"
                             ? "w-[302px] h-3 top-[328px]"
                             : card.size === "medium"
-                            ? "w-[220px] h-[9px] top-[238px]"
-                            : "w-[153px] h-1.5 top-[165px]" // Note: h-1.5 is a very small height (0.375rem).
+                              ? "w-[220px] h-[9px] top-[238px]"
+                              : "w-[153px] h-1.5 top-[167px]" // Note: h-1.5 is a very small height (0.375rem).
                         } left-0`}
                         alt="Line" // Alt text for the decorative line.
                         src={
@@ -213,12 +213,12 @@ const JournalCards = () => {
                           card.size === "large"
                             ? "/line-2.svg"
                             : card.position === "left" // For medium and small cards positioned left
-                            ? "/line-1-1.svg"
-                            : card.position === "right" // For medium and small cards positioned right
-                            ? "/line-1.svg"
-                            : card.position === "far-left" // Specifically for small cards positioned far-left
-                            ? "/line-3.svg"
-                            : "/line-1-2.svg" // Default line for other small cards (e.g., far-right)
+                              ? "/line-1-1.svg"
+                              : card.position === "right" // For medium and small cards positioned right
+                                ? "/line-1.svg"
+                                : card.position === "far-left" // Specifically for small cards positioned far-left
+                                  ? "/line-3.svg"
+                                  : "/line-1-2.svg" // Default line for other small cards (e.g., far-right)
                         }
                       />
                       {/* Score circle image (visual background for the score text). */}
@@ -232,10 +232,10 @@ const JournalCards = () => {
                           card.size === "large"
                             ? "/ellipse-1.svg"
                             : card.size === "medium"
-                            ? "/ellipse-1-2.svg" // One type of ellipse for all medium cards.
-                            : card.position === "far-left" // Specific ellipse for small far-left cards.
-                            ? "/ellipse-2.svg"
-                            : "/ellipse-1-1.svg" // Default ellipse for other small cards (e.g., far-right).
+                              ? "/ellipse-1-2.svg" // One type of ellipse for all medium cards.
+                              : card.position === "far-left" // Specific ellipse for small far-left cards.
+                                ? "/ellipse-2.svg"
+                                : "/ellipse-1-1.svg" // Default ellipse for other small cards (e.g., far-right).
                         }
                       />
                       {/* Score text display, overlaid on the score circle. */}
@@ -258,10 +258,8 @@ const JournalCards = () => {
                           card.size === "large"
                             ? "top-[358px] left-1.5"
                             : card.size === "medium"
-                            ? "top-[261px] left-1"
-                            : card.position === "far-left" // Specific positioning for small far-left cards.
-                            ? "top-[188px] left-[3px]"
-                            : "top-[182px] left-[3px]" // Default positioning for other small cards (e.g., far-right).
+                              ? "top-[261px] left-1"
+                              : "top-[188px] left-[3px]" // Default positioning for small cards
                         } ${titleFontClasses} [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-center`}
                       >
                         &quot;{card.title}&quot;{" "}
@@ -277,10 +275,8 @@ const JournalCards = () => {
                           card.size === "large"
                             ? "top-[395px] left-[67px]"
                             : card.size === "medium"
-                            ? "top-72 left-12" // Consistent positioning for medium cards.
-                            : card.position === "far-left" // Specific positioning for small far-left cards.
-                            ? "top-[217px] left-[31px]"
-                            : "top-[200px] left-[34px]" // Default positioning for other small cards.
+                              ? "top-72 left-12" // Consistent positioning for medium cards.
+                              : "top-[205px] left-[34px]" // Default positioning for small cards.
                         } ${dateFontClasses} [font-family:'Inter',Helvetica] font-normal text-black text-center`}
                       >
                         {card.date} {/* The card date from data. */}
@@ -295,10 +291,10 @@ const JournalCards = () => {
                           card.size === "large"
                             ? "top-[430px] left-[67px]"
                             : card.size === "medium"
-                            ? "top-[313px] left-12" // Consistent positioning for medium cards.
-                            : card.position === "far-left" // Specific positioning for small far-left cards. Note: top is `217px`, same as date for this case, but different `left`.
-                            ? "top-[217px] left-[34px]"
-                            : "top-[218px] left-[34px]" // Default positioning for other small cards.
+                              ? "top-[313px] left-12" // Consistent positioning for medium cards.
+                              : card.position === "far-left" // Specific positioning for small far-left cards. Note: top is `217px`, same as date for this case, but different `left`.
+                                ? "top-[217px] left-[34px]"
+                                : "top-[218px] left-[34px]" // Default positioning for other small cards.
                         } ${tapTextClasses} [font-family:'Inter',Helvetica] font-normal text-[#a1a1a1] text-center`}
                       >
                         TAP CARD FOR INSIGHTS {/* Static instructional text. */}

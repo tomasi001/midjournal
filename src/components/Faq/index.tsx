@@ -10,8 +10,8 @@ import { Separator } from "../ui/separator";
 
 const Faq = () => {
   return (
-    <section className="relative w-full max-w-2xl mx-auto my-10 px-4 flex flex-col items-center">
-      <h2 className="h-auto md:h-28 [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-4xl md:text-5xl text-center mb-8 md:mb-10">
+    <section className="relative w-full max-w-2xl mx-auto my-0 md:my-10 px-4 flex flex-col items-center">
+      <h2 className="h-auto md:h-28 [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-4xl md:text-5xl text-center mb-8 md:mb-0">
         FAQs
       </h2>
 
