@@ -10,28 +10,28 @@ const Description = () => {
         how you engage with the world
       </h2>
 
-      <div className="w-full [font-family:'Inter',Helvetica] font-normal text-black text-lg md:text-xl">
+      <div className="max-w-[673px] [font-family:'Inter',Helvetica] font-normal text-black text-lg md:text-xl">
         <p>
           By being more self-aware, you can begin to deepen your understanding
           of the true, cyclical and impermanent nature of emotion – leading to a
           synchronised, less reactionary and more connected state of being.
         </p>
         <p className="mt-6">
-          <span className="font-bold">Go deep.</span>, For centuries journaling
+          <span className="font-bold">Go deep.</span> For centuries journaling
           has served as a powerful way to increase self-awareness. Now imagine
-          an enriching set of tools that enable you to go deeper, understand
-          yourself better, and take greater responsibility for how you engage
-          with the world.
+          an enriching set of tools that enable you to <br />
+          go deeper, understand yourself better, and take greater responsibility
+          for how you engage with the world.
         </p>
         <p className="mt-6">
           <span className="font-bold">A journal evolved. </span> Guided by the
           best in modern psychology and eastern wisdom; we&apos;re building a
-          journal that draws from top academic research and learns with you as
-          you go. Keeping track of your thoughts and emotions to reveal patterns
-          and insights – in a way that helps make sense of the messiness of
-          life.
-          <span className="font-bold">early access</span> below and help us
-          perfect the first mood-to image model.
+          journal that draws from top academic research
+          <br />
+          and learns with you as you go. Keeping track of your thoughts and
+          <br />
+          emotions to reveal patterns and insights – in a way that helps make
+          sense of the messiness of life.
         </p>
         <p className="mt-6">
           <span className="font-bold">See how you feel: </span>

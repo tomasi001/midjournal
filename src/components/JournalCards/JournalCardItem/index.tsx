@@ -42,13 +42,13 @@ const JournalCardItem = ({ card, i, rotate }: JournalCardItemProps) => {
               width={242}
               height={272}
             />
-            <Image
+            {/* <Image
               className="absolute top-1 left-[215px]" // Adjusted left position
               alt="Enlarge"
               src="/enlarge-4.png"
               width={21}
               height={21}
-            />
+            /> */}
             <Image
               className="absolute top-[262px] left-0" // Adjusted height
               alt="Line"
@@ -67,11 +67,11 @@ const JournalCardItem = ({ card, i, rotate }: JournalCardItemProps) => {
               {card.score}{" "}
             </div>
 
-            <div className="absolute top-[286px] left-1.5 w-[231.2px] h-[45.6px] text-[19.68px] [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-center">
+            <div className="absolute top-[295px] left-1.5 w-[231.2px] h-[45.6px] text-[19.68px] [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-center">
               &quot;{card.title}&quot;{" "}
             </div>
 
-            <div className="absolute top-[316px] left-[53.6px] w-[136px] h-[20px] text-[9.84px] [font-family:'Inter',Helvetica] font-normal text-black text-center">
+            <div className="absolute top-[320px] left-[53.6px] w-[136px] h-[20px] text-[9.84px] [font-family:'Inter',Helvetica] font-normal text-black text-center">
               {card.date}{" "}
             </div>
             <div className="absolute top-[344px] left-[53.6px] w-[136px] h-[20px] text-[7.92px] [font-family:'Inter',Helvetica] font-normal text-[#a1a1a1] text-center">
