@@ -44,7 +44,7 @@ const EarlyAccess = () => {
   return (
     <section
       id="early-access"
-      className="relative w-full max-w-3xl mx-auto my-10 scroll-mt-[130px] sm:scroll-mt-[160px]"
+      className="relative w-full max-w-3xl mx-auto my-10 scroll-mt-[60px] sm:scroll-mt-[130px]"
     >
       <Card
         className="w-full h-auto rounded-[20px] py-10 px-4 md:px-0"
