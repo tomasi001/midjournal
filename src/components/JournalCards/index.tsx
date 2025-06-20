@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
 import { journalCards } from "@/constants";
-import { Card, CardContent } from "../ui/card";
+import { motion, useTime, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import JournalCardItem from "./JournalCardItem";
 
 const MAX_WIDTH = 633; // The maximum design width of the component (80% of 791)
 const MAX_HEIGHT = 366; // The maximum design height of the component (80% of 458)
@@ -10,8 +11,6 @@ const MAX_HEIGHT = 366; // The maximum design height of the component (80% of 45
 const JournalCards = () => {
   const containerRef = useRef<HTMLElement>(null);
   const [scale, setScale] = useState(1);
-  const [rotation, setRotation] = useState(0);
-  const animationFrameId = useRef<number | null>(null);
 
   useEffect(() => {
     const calculateScale = () => {
@@ -42,25 +41,8 @@ const JournalCards = () => {
     };
   }, []);
 
-  useEffect(() => {
-    let startTime: number | null = null;
-    const animate = (timestamp: number) => {
-      if (!startTime) {
-        startTime = timestamp;
-      }
-      const elapsedTime = timestamp - startTime;
-      const rotationSpeed = 360 / 50000; // degrees per millisecond
-      setRotation(elapsedTime * rotationSpeed);
-      animationFrameId.current = requestAnimationFrame(animate);
-    };
-    animationFrameId.current = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationFrameId.current) {
-        cancelAnimationFrame(animationFrameId.current);
-      }
-    };
-  }, []);
+  const time = useTime();
+  const rotate = useTransform(time, [0, 50000], [0, 360], { clamp: false });
 
   return (
     <section
@@ -88,78 +70,24 @@ const JournalCards = () => {
             className="relative w-full h-full"
             style={{ perspective: "1000px" }}
           >
-            <div
-              className="absolute top-0 sm:top-2 md:top-[40px] left-[192px] w-[241.6px] h-[366px] journal-card-slider"
+            <motion.div
+              className="absolute top-0 sm:top-2 md:top-[40px] lg:top-0 left-[192px] w-[241.6px] h-[366px]"
               style={{
                 transformStyle: "preserve-3d",
-                transform: `rotateY(${rotation}deg)`,
+                rotateY: rotate,
               }}
             >
               {" "}
               {/* Adjusted width to 80% */}
-              {journalCards.map((card, i) => {
-                const angle = i * (360 / journalCards.length);
-                const effectiveAngle = (rotation + angle) % 360;
-                const isAtBack = effectiveAngle > 77 && effectiveAngle < 280;
-
-                return (
-                  <div
-                    key={card.id}
-                    className={`absolute top-0 left-0 w-full h-full transition-all duration-300 ${
-                      isAtBack ? "blur-sm" : ""
-                    }`}
-                    style={{
-                      transform: `rotateY(${angle}deg) translateZ(220px)`, // Adjusted translateZ for new size
-                    }}
-                  >
-                    <Card className="p-0 w-[241.6px] h-[366px]">
-                      {" "}
-                      {/* Adjusted width and height to 80% */}
-                      <CardContent
-                        className={`p-0 w-full h-full bg-white rounded-[12.32px] shadow-[0px_4px_10px_#00000040]`}
-                      >
-                        <div className="relative w-full h-full">
-                          <img
-                            className="w-[241.6px] h-[272px] absolute top-0 left-0" // Adjusted height to 80%
-                            alt={`Journal visualization - ${card.title}`}
-                            src={card.image}
-                          />
-                          <img
-                            className="absolute w-[21px] h-[21px] top-3 left-[215px]" // Adjusted left position
-                            alt="Enlarge"
-                            src="/enlarge-4.png"
-                          />
-                          <img
-                            className="absolute w-[241.6px] h-3 top-[262px] left-0" // Adjusted height
-                            alt="Line"
-                            src="/line-2.svg"
-                          />
-                          <img
-                            className="w-[54.4px] h-12 absolute top-[239.2px] left-[93.6px]" // Adjusted size
-                            alt="Score circle"
-                            src="/ellipse-1.svg"
-                          />
-                          <div className="w-[41.6px] h-[33.6px] absolute top-[252px] left-[99.2px] text-[23.68px] [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-center">
-                            {card.score}{" "}
-                          </div>
-
-                          <div className="absolute top-[286px] left-1.5 w-[231.2px] h-[45.6px] text-[19.68px] [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-center">
-                            &quot;{card.title}&quot;{" "}
-                          </div>
-
-                          <div className="absolute top-[316px] left-[53.6px] w-[136px] h-[20px] text-[9.84px] [font-family:'Inter',Helvetica] font-normal text-black text-center">
-                            {card.date}{" "}
-                          </div>
-                          <div className="absolute top-[344px] left-[53.6px] w-[136px] h-[20px] text-[7.92px] [font-family:'Inter',Helvetica] font-normal text-[#a1a1a1] text-center">
-                            TAP CARD FOR INSIGHTS{" "}
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                );
-              })}
-            </div>
+              {journalCards.map((card, i) => (
+                <JournalCardItem
+                  key={card.id}
+                  card={card}
+                  i={i}
+                  rotate={rotate}
+                />
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>
