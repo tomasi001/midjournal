@@ -48,7 +48,7 @@ const Header = () => {
   }, [initialHeaderOffsetTop]);
 
   const headerBaseClasses =
-    "w-[90%] h-[80px] sm:h-[120px] rounded-[20px] border border-solid flex items-center justify-between px-4 sm:px-10";
+    "w-[90%] h-[38px] sm:h-[64px] rounded-[6px] sm:rounded-[20px] border border-solid flex items-center justify-between pl-3 pr-2";
 
   const headerVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -74,13 +74,13 @@ const Header = () => {
         }`}
       >
         {/* Static header content - duplicated for layout calculation, hidden when sticky */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1 sm:gap-2">
           <img
-            className="w-[21px] h-[21px] sm:w-[44px] sm:h-[44px]"
+            className="w-[22px] h-[22px] sm:w-[37px] sm:h-[37px]"
             alt="Midjournal logo"
             src="/midjournal-logo-black.png"
           />
-          <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-xl sm:text-[40px]">
+          <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-[15px] sm:text-[24px]">
             Midjournal
           </h1>
         </div>
@@ -90,7 +90,7 @@ const Header = () => {
               behavior: "smooth",
             });
           }}
-          className="w-[148.5px] h-[42.75px] sm:w-[198px] sm:h-[57px] bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-md sm:text-xl"
+          className="w-[102px] h-[26px] sm:w-[198px] sm:h-[48px] bg-black rounded-[5.5px] sm:rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-[11px] sm:text-xl"
         >
           EARLY ACCESS
         </Button>
@@ -108,13 +108,13 @@ const Header = () => {
             variants={headerVariants}
             // layout // Potentially enable if complex layout shifts occur, but can be costly
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1 sm:gap-2">
               <img
-                className="w-[21px] h-[21px] sm:w-[44px] sm:h-[44px]"
+                className="w-[22px] h-[22px] sm:w-[37px] sm:h-[37px]"
                 alt="Midjournal logo"
                 src="/midjournal-logo-black.png"
               />
-              <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-xl sm:text-[40px]">
+              <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-[15px] sm:text-[24px]">
                 Midjournal
               </h1>
             </div>
@@ -124,7 +124,7 @@ const Header = () => {
                   behavior: "smooth",
                 });
               }}
-              className="w-[148.5px] h-[42.75px] sm:w-[198px] sm:h-[57px] bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-md sm:text-xl"
+              className="w-[102px] h-[26px] sm:w-[198px] sm:h-[48px] bg-black rounded-[5.5px] sm:rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-[11px] sm:text-xl"
             >
               EARLY ACCESS
             </Button>

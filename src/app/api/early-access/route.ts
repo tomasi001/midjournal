@@ -119,9 +119,6 @@ export async function POST(req: NextRequest) {
     }));
 
     const html = welcomeTemplate({
-      name: email,
-      confirmationLink:
-        process.env.NEXT_PUBLIC_APP_URL || "https://midjournal.com",
       images: {},
     });
 

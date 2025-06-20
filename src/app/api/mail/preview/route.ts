@@ -30,8 +30,6 @@ export async function GET() {
     }
 
     const html = welcomeTemplate({
-      name: "User Name",
-      confirmationLink: "#",
       images: imageSources,
     });
 

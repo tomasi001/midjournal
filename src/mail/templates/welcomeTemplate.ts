@@ -1,10 +1,6 @@
 const welcomeTemplate = ({
-  name,
-  confirmationLink,
   images,
 }: {
-  name: string;
-  confirmationLink: string;
   images?: { [key: string]: string };
 }) => `
 <!DOCTYPE html>
@@ -43,11 +39,13 @@ const welcomeTemplate = ({
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to Midjournal, ${name}</h1>
-      <p>We are excited to have you on board!</p> 
-      <p>Please click the button below to visit the platform:</p>
-      <p><a href="${confirmationLink}" class="button">Visit Platform</a></p> 
-      <p>If you did not create this account or believe this was sent to you in error, please contact our support team immediately.</p>
+      <p>Hey!</p>
+      <p>Thank you for applying for early access to Midjournal. We're genuinely excited to have you here with us from the very beginning.</p>
+      <p>Midjournal is grounded in the belief that the more we understand ourselves, the more gracefully we can move through life — not just as individuals, but as a collective. That's why having you with us from the beginning truly means a lot</p>
+      <p>We'll be in touch again when V0 is ready to explore. In the meantime we'd love to learn as much as we can. So if you're up for it, please take a moment to fill out this short product survey – it will help us shape something truly meaningful:</p>
+      <p>👉 <a href="https://forms.gle/ReXeBVbKp4bkSsUs6" target="_blank" rel="noopener noreferrer" style="color: #007bff;">https://forms.gle/ReXeBVbKp4bkSsUs6</a></p>
+      <p>Until we chat again – wishing you peace and equanimity.</p>
+      <p>Regards,<br>Tom & Connor<br>(Co-founders)</p>
     </div>
 
     <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 450px; margin: 40px auto 0; background-color: #ffffff;">
