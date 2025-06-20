@@ -7,6 +7,17 @@ import { Redis } from "@upstash/redis";
 import { MailOptions, sendMail } from "@/mail";
 import welcomeTemplate from "@/mail/templates/welcomeTemplate";
 
+// Function to safely get the private key
+const getPrivateKey = () => {
+  if (process.env.GOOGLE_PRIVATE_KEY_BASE64) {
+    return Buffer.from(
+      process.env.GOOGLE_PRIVATE_KEY_BASE64,
+      "base64"
+    ).toString("utf-8");
+  }
+  throw new Error("Google private key is not set in environment variables.");
+};
+
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_REST_URL!,
   token: process.env.UPSTASH_REDIS_REST_TOKEN!,
@@ -21,7 +32,7 @@ const ratelimit = new Ratelimit({
 
 const serviceAccountAuth = new JWT({
   email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-  key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+  key: getPrivateKey(),
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
