@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Midjournal App",
+  title: "Midjournal",
   description: "Your journaling companion",
 };
 

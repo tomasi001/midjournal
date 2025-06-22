@@ -3,6 +3,7 @@
 import { Button } from "../ui/button";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image"; // Import Image from next/image
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,10 +76,12 @@ const Header = () => {
       >
         {/* Static header content - duplicated for layout calculation, hidden when sticky */}
         <div className="flex items-center gap-1 sm:gap-2">
-          <img
+          <Image
             className="w-[22px] h-[22px] sm:w-[37px] sm:h-[37px]"
             alt="Midjournal logo"
-            src="/midjournal-logo-black.png"
+            src="/midjournal-logo-black-header.png"
+            width={37}
+            height={37}
           />
           <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-[15px] sm:text-[24px]">
             Midjournal
@@ -109,10 +112,12 @@ const Header = () => {
             // layout // Potentially enable if complex layout shifts occur, but can be costly
           >
             <div className="flex items-center gap-1 sm:gap-2">
-              <img
+              <Image
                 className="w-[22px] h-[22px] sm:w-[37px] sm:h-[37px]"
                 alt="Midjournal logo"
-                src="/midjournal-logo-black.png"
+                src="/midjournal-logo-black-header.png"
+                width={37}
+                height={37}
               />
               <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-[15px] sm:text-[24px]">
                 Midjournal

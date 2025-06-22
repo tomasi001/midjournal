@@ -11,12 +11,18 @@ export async function GET() {
 
   try {
     const imageDetails = {
-      logo: "midjournal-logo-black.png",
-      x: "x.png",
-      tiktok: "tiktok.png",
-      linkedin: "linkedin.png",
-      instagram: "instagram.png",
-      facebook: "facebook.png",
+      logo_black: "midjournal-logo-black.png",
+      logo_white: "midjournal-logo-white.png",
+      x_black: "x-black.png",
+      x_white: "x-white.png",
+      tiktok_black: "tiktok-black.png",
+      tiktok_white: "tiktok-white.png",
+      linkedin_black: "linkedin-black.png",
+      linkedin_white: "linkedin-white.png",
+      instagram_black: "instagram-black.png",
+      instagram_white: "instagram-white.png",
+      facebook_black: "facebook-black.png",
+      facebook_white: "facebook-white.png",
     };
 
     const imageSources: { [key: string]: string } = {};

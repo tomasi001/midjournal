@@ -1,13 +1,16 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="relative w-full flex flex-col items-center my-0 md:my-16 py-10 px-12">
-      <img
+      <Image
         className="w-[44px] h-[44px] sm:w-[112px] sm:h-[112px] mb-8 sm:mb-16"
         alt="Midjournal logo"
-        src="/midjournal-logo-black.png"
+        src="/midjournal-logo-black-bottom.png"
+        width={112}
+        height={112}
       />
 
       <p className="w-full max-w-xl mb-4 sm:max-w-2xl h-auto mt-[-20px] sm:mt-[-34px] [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-xl sm:text-6xl text-center">
@@ -25,10 +28,12 @@ const Footer = () => {
 
       <div className="flex gap-2 sm:gap-3 mt-4">
         <Link href="mailto:hello@midjournal.xyz">
-          <img
+          <Image
             className="w-[30px] sm:w-[49px] h-[30px] sm:h-[49px]"
             alt="Email"
-            src="/email.png"
+            src="/email-black.png"
+            width={49}
+            height={49}
           />
         </Link>
         <Link
@@ -36,10 +41,12 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             className="w-[30px] sm:w-[49px] h-[30px] sm:h-[49px] object-cover"
             alt="Facebook"
-            src="/facebook.png"
+            src="/facebook-black.png"
+            width={49}
+            height={49}
           />
         </Link>
         <Link
@@ -47,10 +54,12 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             className="w-[30px] sm:w-[49px] h-[30px] sm:h-[49px]"
             alt="Instagram"
-            src="/instagram.png"
+            src="/instagram-black.png"
+            width={49}
+            height={49}
           />
         </Link>
         <Link
@@ -58,10 +67,12 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             className="w-[30px] sm:w-[49px] h-[30px] sm:h-[49px]"
             alt="X (Twitter)"
-            src="/x.png"
+            src="/x-black.png"
+            width={49}
+            height={49}
           />
         </Link>
         <Link
@@ -69,10 +80,12 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             className="w-[30px] sm:w-[49px] h-[30px] sm:h-[49px] object-cover"
             alt="TikTok"
-            src="/tiktok.png"
+            src="/tiktok-black.png"
+            width={49}
+            height={49}
           />
         </Link>
         <Link
@@ -80,10 +93,12 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             className="w-[30px] sm:w-[49px] h-[30px] sm:h-[49px]"
             alt="LinkedIn"
-            src="/linkedin.png"
+            src="/linkedin-black.png"
+            width={49}
+            height={49}
           />
         </Link>
       </div>

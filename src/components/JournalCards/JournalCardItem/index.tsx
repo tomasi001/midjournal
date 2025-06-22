@@ -16,7 +16,7 @@ const JournalCardItem = ({ card, i, rotate }: JournalCardItemProps) => {
   const angle = i * (360 / journalCards.length);
   const blur = useTransform(rotate, (latest) => {
     const effectiveAngle = (latest + angle) % 360;
-    return effectiveAngle > 77 && effectiveAngle < 280 ? 4 : 0;
+    return effectiveAngle > 77 && effectiveAngle < 282 ? 15 : 0;
   });
 
   return (
