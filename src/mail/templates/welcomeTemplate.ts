@@ -135,7 +135,7 @@ const welcomeTemplate = ({
                     alt="Midjournal Logo"
                     width="115"
                     height="115"
-                    style="display: block; border: 0;"
+                    style="display: block; border: 0; width: 115px; height: 115px; min-width: 115px;"
                     class="light-img"
                   />
                   <!--[if !mso]><! -->
@@ -148,7 +148,7 @@ const welcomeTemplate = ({
                       alt="Midjournal Logo"
                       width="115"
                       height="115"
-                      style="display: block; border: 0;"
+                      style="display: block; border: 0; width: 115px; height: 115px; min-width: 115px;"
                     />
                   </div>
                   <!--<![endif]-->
