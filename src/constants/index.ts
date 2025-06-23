@@ -8,8 +8,8 @@ export const journalCards = [
     image: "/gemini-generated-image-7y4hsm7y4hsm7y4h-1.png",
     position: "center",
     size: "large",
-    lineSrc: "/line-2.svg",
-    ellipseSrc: "/ellipse-1.svg",
+    lineSrc: "/line-2",
+    ellipseSrc: "/ellipse-1",
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ export const journalCards = [
     image: "/gemini-generated-image-yklcoryklcoryklc-1.png",
     position: "right",
     size: "medium",
-    lineSrc: "/line-1.svg",
-    ellipseSrc: "/ellipse-1-2.svg",
+    lineSrc: "/line-1",
+    ellipseSrc: "/ellipse-1-2",
   },
   {
     id: 3,
@@ -30,8 +30,8 @@ export const journalCards = [
     image: "/gemini-generated-image-d9dmdhd9dmdhd9dm-1.png",
     position: "far-right",
     size: "small",
-    lineSrc: "/line-1-2.svg",
-    ellipseSrc: "/ellipse-1-1.svg",
+    lineSrc: "/line-1-2",
+    ellipseSrc: "/ellipse-1-1",
   },
   {
     id: 4,
@@ -41,8 +41,8 @@ export const journalCards = [
     image: "/gemini-generated-image-mp6zh2mp6zh2mp6z-2.png",
     position: "far-left",
     size: "small",
-    lineSrc: "/line-3.svg",
-    ellipseSrc: "/ellipse-2.svg",
+    lineSrc: "/line-3",
+    ellipseSrc: "/ellipse-2",
   },
   {
     id: 5,
@@ -52,8 +52,8 @@ export const journalCards = [
     image: "/gemini-generated-image-2is7c82is7c82is7-3.png",
     position: "left",
     size: "medium",
-    lineSrc: "/line-1-1.svg",
-    ellipseSrc: "/ellipse-1-2.svg",
+    lineSrc: "/line-1-1",
+    ellipseSrc: "/ellipse-1-2",
   },
 ];
 
