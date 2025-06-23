@@ -1,22 +1,24 @@
-import nodemailer from "nodemailer";
-import { Attachment } from "nodemailer/lib/mailer";
+import nodemailer, { SendMailOptions } from "nodemailer";
 
-export type MailOptions = {
+export type MailOptions = SendMailOptions & {
   to: string;
   subject: string;
   html: string;
   successMessage: string;
   errorMessage: string;
-  attachments?: Attachment[];
 };
 
 // Create a transport for sending emails (replace with your email service's data)
 const transporter = nodemailer.createTransport({
-  service: process.env.EMAIL_HOST, // Use your email service
+  host: process.env.EMAIL_HOST,
+  port: Number(process.env.EMAIL_PORT),
+  secure: process.env.EMAIL_SECURE === "true",
   auth: {
     user: process.env.SENDER_EMAIL, // Your email address
     pass: process.env.SENDER_PASSWORD, // Your password
   },
+  logger: true,
+  debug: true,
 });
 
 // Send the email
@@ -24,6 +26,8 @@ export const sendMail = ({
   to,
   subject,
   html,
+  text,
+  list,
   successMessage,
   errorMessage,
   attachments,
@@ -33,7 +37,9 @@ export const sendMail = ({
     to,
     subject,
     html,
+    text,
     attachments,
+    list,
   };
 
   return new Promise((resolve, reject) => {

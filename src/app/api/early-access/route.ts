@@ -1,11 +1,13 @@
-import { NextRequest, NextResponse } from "next/server";
-import path from "path";
-import { GoogleSpreadsheet } from "google-spreadsheet";
-import { JWT } from "google-auth-library";
+import { MailOptions, sendMail } from "@/mail";
+import welcomeTemplate, {
+  welcomeTemplateTextFallback,
+} from "@/mail/templates/welcomeTemplate";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
-import { MailOptions, sendMail } from "@/mail";
-import welcomeTemplate from "@/mail/templates/welcomeTemplate";
+import { JWT } from "google-auth-library";
+import { GoogleSpreadsheet } from "google-spreadsheet";
+import { NextRequest, NextResponse } from "next/server";
+import path from "path";
 
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_REST_URL!,
@@ -132,7 +134,16 @@ export async function POST(req: NextRequest) {
       to: email,
       subject: "Welcome to Midjournal!",
       html,
+      text: welcomeTemplateTextFallback,
       attachments,
+      list: {
+        unsubscribe: {
+          url: `http://www.midjournal.xyz/unsubscribe?email=${encodeURIComponent(
+            email
+          )}`,
+          comment: "Unsubscribe",
+        },
+      },
       successMessage: `Successfully sent welcome email to ${email}`,
       errorMessage: "Failed to send welcome email",
     };

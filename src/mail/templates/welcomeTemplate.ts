@@ -1,4 +1,22 @@
-const welcomeTemplate = ({
+export const welcomeTemplateTextFallback = `Hey!
+
+Thank you for applying for early access to Midjournal. We're genuinely excited to have you here with us from the very beginning.
+
+Midjournal is grounded in the belief that the more we understand ourselves, the more gracefully we can move through life — not just as individuals, but as a collective. That's why having you with us from the beginning truly means a lot
+
+We'll be in touch again when V0 is ready to explore. In the meantime we'd love to learn as much as we can. So if you're up for it, please take a moment to fill out this short product survey – it will help us shape something truly meaningful:
+
+👉 https://forms.gle/ReXeBVbKp4bkSsUs6
+
+Until we chat again – wishing you peace and equanimity.
+
+Regards,
+Tom & Connor
+(Co-founders)
+
+www.midjournal.xyz`;
+
+export const welcomeTemplate = ({
   images,
 }: {
   images?: {
