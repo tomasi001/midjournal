@@ -4,6 +4,7 @@ import { journalCards } from "@/constants";
 import type { MotionValue } from "framer-motion";
 import { motion, useTransform } from "framer-motion";
 import Image from "next/image";
+import SvgIcon from "../../ui/SvgIcon";
 import { Card, CardContent } from "../../ui/card";
 
 export interface JournalCardItemProps {
@@ -42,26 +43,14 @@ const JournalCardItem = ({ card, i, rotate }: JournalCardItemProps) => {
               width={242}
               height={272}
             />
-            {/* <Image
-              className="absolute top-1 left-[215px]" // Adjusted left position
-              alt="Enlarge"
-              src="/enlarge-4.png"
-              width={21}
-              height={21}
-            /> */}
-            <Image
-              className="absolute top-[262px] left-0" // Adjusted height
-              alt="Line"
-              src={card.lineSrc}
-              width={242}
-              height={12}
+
+            <SvgIcon
+              name={card.lineSrc.substring(1)}
+              className="absolute top-[262px] left-0"
             />
-            <Image
-              className="absolute top-[243px] left-[93.6px]" // Adjusted size
-              alt="Score circle"
-              src={card.ellipseSrc}
-              width={54}
-              height={48}
+            <SvgIcon
+              name={card.ellipseSrc.substring(1)}
+              className="absolute top-[243px] left-[93.6px]"
             />
             <div className="w-[41.6px] h-[33.6px] absolute top-[252px] left-[99.2px] text-[23.68px] font-normal text-black text-center">
               {card.score}{" "}
