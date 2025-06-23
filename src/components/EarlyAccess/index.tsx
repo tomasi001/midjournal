@@ -54,7 +54,7 @@ const EarlyAccess = () => {
         }}
       >
         <CardContent className="p-0 flex flex-col items-center justify-center h-full">
-          <h2 className="w-full h-auto mb-8 md:mb-12 [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-white text-4xl md:text-5xl text-center">
+          <h2 className="w-full h-auto mb-8 md:mb-12 font-normal text-white text-4xl md:text-5xl text-center">
             Early access
           </h2>
 
@@ -67,19 +67,19 @@ const EarlyAccess = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="h-[46px] sm:h-[54px] w-[98%] sm:w-full sm:mx-2 border-none pl-4 sm:pl-6 [font-family:'Inter',Helvetica] font-normal text-[#00000063] text-sm sm:text-base"
+              className="h-[46px] sm:h-[54px] w-[98%] sm:w-full sm:mx-2 border-none pl-4 sm:pl-6 font-normal text-[#00000063] text-sm sm:text-base"
               placeholder="Email"
             />
             <Button
               type="submit"
               disabled={loading}
-              className="w-full sm:w-[193px] h-[50px] sm:h-[58px] mt-2 sm:mt-0 sm:mr-1.5 bg-black rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-lg sm:text-xl"
+              className="w-full sm:w-[193px] h-[50px] sm:h-[58px] mt-2 sm:mt-0 sm:mr-1.5 bg-black rounded-[10px] font-bold text-white text-lg sm:text-xl"
             >
               {loading ? "APPLYING..." : "APPLY"}
             </Button>
           </form>
 
-          <p className="w-full max-w-md mt-6 [font-family:'Inter',Helvetica] font-normal text-white text-xs text-center px-4 sm:px-0">
+          <p className="w-full max-w-md mt-6 font-normal text-white text-xs text-center px-4 sm:px-0">
             By hitting &quot;APPLY&quot; you agree to be contacted via email
           </p>
         </CardContent>

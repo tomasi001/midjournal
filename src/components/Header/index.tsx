@@ -83,7 +83,7 @@ const Header = () => {
             width={37}
             height={37}
           />
-          <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-[15px] sm:text-[24px]">
+          <h1 className="font-normal text-black text-[15px] sm:text-[24px]">
             Midjournal
           </h1>
         </div>
@@ -93,7 +93,7 @@ const Header = () => {
               behavior: "smooth",
             });
           }}
-          className="w-[102px] h-[26px] sm:w-[198px] sm:h-[48px] bg-black rounded-[5.5px] sm:rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-[11px] sm:text-xl"
+          className="w-[102px] h-[26px] sm:w-[198px] sm:h-[48px] bg-black rounded-[5.5px] sm:rounded-[10px] font-bold text-white text-[11px] sm:text-xl"
         >
           EARLY ACCESS
         </Button>
@@ -119,7 +119,7 @@ const Header = () => {
                 width={37}
                 height={37}
               />
-              <h1 className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-[15px] sm:text-[24px]">
+              <h1 className="font-normal text-black text-[15px] sm:text-[24px]">
                 Midjournal
               </h1>
             </div>
@@ -129,7 +129,7 @@ const Header = () => {
                   behavior: "smooth",
                 });
               }}
-              className="w-[102px] h-[26px] sm:w-[198px] sm:h-[48px] bg-black rounded-[5.5px] sm:rounded-[10px] [font-family:'Inter',Helvetica] font-bold text-white text-[11px] sm:text-xl"
+              className="w-[102px] h-[26px] sm:w-[198px] sm:h-[48px] bg-black rounded-[5.5px] sm:rounded-[10px] font-bold text-white text-[11px] sm:text-xl"
             >
               EARLY ACCESS
             </Button>

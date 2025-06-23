@@ -3,14 +3,12 @@ import React from "react";
 const Description = () => {
   return (
     <section className="relative w-full max-w-3xl mx-auto my-10 px-4 flex flex-col gap-6">
-      <h2 className="w-full h-auto [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-black text-4xl md:text-5xl">
-        <span className="[font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_SemiLight-Italic',Helvetica] italic font-bold">
-          Level up
-        </span>{" "}
-        how you engage with the world
+      <h2 className="w-full h-auto font-normal text-black text-4xl md:text-5xl">
+        <span className="italic font-bold">Level up</span> how you engage with
+        the world
       </h2>
 
-      <div className="max-w-[673px] [font-family:'Inter',Helvetica] font-normal text-black text-lg md:text-xl">
+      <div className="max-w-[673px] font-normal text-black text-lg md:text-xl">
         <p>
           By being more self-aware, you can begin to deepen your understanding
           of the true, cyclical and impermanent nature of emotion – leading to a

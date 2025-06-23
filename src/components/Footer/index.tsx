@@ -13,11 +13,11 @@ const Footer = () => {
         height={112}
       />
 
-      <p className="w-full max-w-xl mb-4 sm:max-w-2xl h-auto mt-[-20px] sm:mt-[-34px] [font-family:'FONTSPRING_DEMO_-_Breul_Grotesk_A_ExtraLight-Regular',Helvetica] font-normal text-xl sm:text-6xl text-center">
+      <p className="w-full max-w-xl mb-4 sm:max-w-2xl h-auto mt-[-20px] sm:mt-[-34px] font-normal text-xl sm:text-6xl text-center">
         Midjournal
       </p>
 
-      <div className="w-full [font-family:'Inter',Helvetica] font-normal text-black text-[10px] sm:text-base py-0 sm:py-4">
+      <div className="w-full font-normal text-black text-[10px] sm:text-base py-0 sm:py-4">
         <p className="text-center max-w-[280px] sm:max-w-[890px] mx-auto">
           By using the latest technology to provide an enriched set of tools,
           we’re on a mission to illuminate the world of emotion – with the aim
