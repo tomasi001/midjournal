@@ -24,13 +24,13 @@ const welcomeTemplate = ({
     <meta name="color-scheme" content="light dark" />
     <meta name="supported-color-schemes" content="light dark" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Public+Sans:wght@400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400&display=swap');
       :root {
         color-scheme: light dark;
         supported-color-schemes: light dark;
       }
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Public Sans', Arial, sans-serif;
         background-color: transparent;
         color: #333;
         margin: 0;
@@ -135,7 +135,7 @@ const welcomeTemplate = ({
                     alt="Midjournal Logo"
                     width="115"
                     height="115"
-                    style="display: block; border: 0;"
+                    style="display: block; border: 0; width: 115px; height: 115px; min-width: 115px;"
                     class="light-img"
                   />
                   <!--[if !mso]><! -->
@@ -148,7 +148,7 @@ const welcomeTemplate = ({
                       alt="Midjournal Logo"
                       width="115"
                       height="115"
-                      style="display: block; border: 0;"
+                      style="display: block; border: 0; width: 115px; height: 115px; min-width: 115px;"
                     />
                   </div>
                   <!--<![endif]-->
@@ -168,7 +168,7 @@ const welcomeTemplate = ({
                     </td>
                   </tr>
                   <tr>
-                    <td class="text-primary" style="padding-top: 0px; font-family: 'Inter', Arial, sans-serif; font-size: 10px; line-height: 12px;">
+                    <td class="text-primary" style="padding-top: 0px; font-family: 'Public Sans', Arial, sans-serif; font-size: 10px; line-height: 12px;">
                       On a mission to illuminate the world of emotion.
                     </td>
                   </tr>
@@ -252,7 +252,7 @@ const welcomeTemplate = ({
                     </td>
                   </tr>
                   <tr>
-                    <td style="padding-top: 0px; font-family: 'Inter', Arial, sans-serif; font-size: 11px; line-height: 14px;">
+                    <td style="padding-top: 0px; font-family: 'Public Sans', Arial, sans-serif; font-size: 11px; line-height: 14px;">
                       <a href="http://www.midjournal.xyz" class="text-primary" style="text-decoration: none;">www.midjournal.xyz</a>
                     </td>
                   </tr>
