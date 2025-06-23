@@ -71,7 +71,7 @@ const JournalCards = () => {
             style={{ perspective: "1000px" }}
           >
             <motion.div
-              className="absolute top-0 sm:top-2 md:top-[40px] lg:top-0 left-[192px] w-[241.6px] h-[366px]"
+              className="absolute top-0 sm:top-2 md:top-[40px] xl:top-0 left-[192px] w-[241.6px] h-[366px]"
               style={{
                 transformStyle: "preserve-3d",
                 rotateY: rotate,
