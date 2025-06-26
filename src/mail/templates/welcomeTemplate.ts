@@ -14,7 +14,7 @@ Regards,
 Tom & Connor
 (Co-founders)
 
-www.midjournal.xyz`;
+www.midjournal.me`;
 
 export const welcomeTemplate = ({
   images,
@@ -147,7 +147,7 @@ export const welcomeTemplate = ({
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td width="135" valign="top">
-                <a href="http://www.midjournal.xyz" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.midjournal.me" target="_blank" rel="noopener noreferrer">
                   <img
                     src="${images?.logo_black ?? "cid:logo_black"}"
                     alt="Midjournal Logo"
@@ -271,7 +271,7 @@ export const welcomeTemplate = ({
                   </tr>
                   <tr>
                     <td style="padding-top: 0px; font-family: 'Public Sans', Arial, sans-serif; font-size: 11px; line-height: 14px;">
-                      <a href="http://www.midjournal.xyz" class="text-primary" style="text-decoration: none;">www.midjournal.xyz</a>
+                      <a href="https://www.midjournal.me" class="text-primary" style="text-decoration: none;">www.midjournal.me</a>
                     </td>
                   </tr>
                 </table>

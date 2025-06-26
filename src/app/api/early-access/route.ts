@@ -138,7 +138,7 @@ export async function POST(req: NextRequest) {
       attachments,
       list: {
         unsubscribe: {
-          url: `http://www.midjournal.xyz/unsubscribe?email=${encodeURIComponent(
+          url: `https://www.midjournal.me/unsubscribe?email=${encodeURIComponent(
             email
           )}`,
           comment: "Unsubscribe",

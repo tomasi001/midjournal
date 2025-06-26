@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
+  // import SENDER_EMAIL to use in href mailto:
+  const SENDER_EMAIL = process.env.SENDER_EMAIL;
+
   return (
     <footer className="relative w-full flex flex-col items-center my-0 md:my-16 py-10 px-12">
       <Image
@@ -27,7 +30,7 @@ const Footer = () => {
       </div>
 
       <div className="flex gap-2 sm:gap-3 mt-4">
-        <Link href="mailto:hello@midjournal.xyz">
+        <Link href={`mailto:${SENDER_EMAIL}`}>
           <Image
             className="w-[30px] sm:w-[49px] h-[30px] sm:h-[49px]"
             alt="Email"
