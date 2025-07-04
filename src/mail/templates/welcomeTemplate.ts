@@ -84,6 +84,9 @@ export const welcomeTemplate = ({
         .link-primary {
           color: #91add4 !important;
         }
+        .footer-table {
+          background-color: #2c2c2e !important;
+        }
         .dark-img {
           display: block !important;
           width: auto !important;
@@ -119,7 +122,8 @@ export const welcomeTemplate = ({
       [data-ogsc] .separator {
         border-color: #eeeeee !important;
       }
-      [data-ogsc] .container {
+      [data-ogsc] .container,
+      [data-ogsc] .footer-table {
         background-color: #2c2c2e !important;
       }
       [data-ogsc] .text-primary {
@@ -141,7 +145,15 @@ export const welcomeTemplate = ({
       <p class="text-primary">Regards,<br>Tom & Connor<br>(Co-founders)</p>
     </div>
 
-    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 450px; margin: 40px auto 0; background-color: #ffffff;">
+    <table
+      class="footer-table"
+      align="center"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="max-width: 450px; margin: 40px auto 0; background-color: #ffffff;"
+    >
       <tr>
         <td style="padding: 20px;">
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
