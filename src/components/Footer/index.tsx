@@ -40,7 +40,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://www.facebook.com/midjournal.xyzzz"
+          href="https://www.facebook.com/midjournalme"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -53,7 +53,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://www.instagram.com/midjournal.xyz"
+          href="https://www.instagram.com/midjournal.me"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -66,7 +66,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://x.com/midjournalxyz"
+          href="https://x.com/midjournalme"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -79,7 +79,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://www.tiktok.com/@midjournal.xyz"
+          href="https://www.tiktok.com/@midjournalme"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -92,7 +92,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://www.linkedin.com/company/midjournalxyz/"
+          href="https://www.linkedin.com/company/midjournalme"
           target="_blank"
           rel="noopener noreferrer"
         >

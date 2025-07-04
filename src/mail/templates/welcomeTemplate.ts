@@ -195,7 +195,7 @@ export const welcomeTemplate = ({
                       <table border="0" cellpadding="0" cellspacing="0">
                         <tr>
                           <td style="padding-right: 5px;">
-                            <a href="https://x.com/midjournalxyz" target="_blank" rel="noopener noreferrer">
+                            <a href="https://x.com/midjournalme" target="_blank" rel="noopener noreferrer">
                               <img src="${
                                 images?.x_black ?? "cid:x_black"
                               }" alt="X" width="20" height="20" style="display: block; width: 20px; height: 20px;" class="light-img">
@@ -209,7 +209,7 @@ export const welcomeTemplate = ({
                             </a>
                           </td>
                           <td style="padding-right: 5px;">
-                            <a href="https://www.tiktok.com/@midjournal.xyz" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.tiktok.com/@midjournalme" target="_blank" rel="noopener noreferrer">
                               <img src="${
                                 images?.tiktok_black ?? "cid:tiktok_black"
                               }" alt="TikTok" width="18" height="18" style="display: block; width: 18px; height: 18px;" class="light-img">
@@ -223,7 +223,7 @@ export const welcomeTemplate = ({
                             </a>
                           </td>
                           <td style="padding-right: 5px;">
-                            <a href="https://www.linkedin.com/company/midjournalxyz/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/company/midjournalme" target="_blank" rel="noopener noreferrer">
                               <img src="${
                                 images?.linkedin_black ?? "cid:linkedin_black"
                               }" alt="LinkedIn" width="20" height="20" style="display: block; width: 20px; height: 20px;" class="light-img">
@@ -237,7 +237,7 @@ export const welcomeTemplate = ({
                             </a>
                           </td>
                           <td style="padding-right: 5px;">
-                            <a href="https://www.instagram.com/midjournal.xyz" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/midjournal.me" target="_blank" rel="noopener noreferrer">
                               <img src="${
                                 images?.instagram_black ?? "cid:instagram_black"
                               }" alt="Instagram" width="19" height="19" style="display: block; width: 19px; height: 19px;" class="light-img">
@@ -252,7 +252,7 @@ export const welcomeTemplate = ({
                             </a>
                           </td>
                           <td>
-                            <a href="https://www.facebook.com/midjournal.xyzzz" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.facebook.com/midjournalme" target="_blank" rel="noopener noreferrer">
                               <img src="${
                                 images?.facebook_black ?? "cid:facebook_black"
                               }" alt="Facebook" width="20" height="19" style="display: block; width: 20px; height: 19px;" class="light-img">
