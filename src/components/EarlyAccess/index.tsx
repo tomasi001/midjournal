@@ -26,7 +26,9 @@ const EarlyAccess = () => {
       const data = await res.json();
 
       if (res.ok) {
-        toast.success("Success! Please check your email for a confirmation.");
+        toast.success(
+          "Success! NB: Please check your spam folder if you have not received a confirmation email."
+        );
         setEmail("");
       } else if (res.status === 409) {
         toast.warning(data.message || "This email is already on the list.");
