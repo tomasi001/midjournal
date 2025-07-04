@@ -21,10 +21,10 @@ export const Home = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center w-[92%] mx-auto py-8 sm:py-16">
-        <h2 className="max-w-[280px] sm:max-w-2xl text-center h-auto font-normal text-black text-4xl md:text-5xl leading-tight">
-          We’re building a smart journal that{" "}
-          <span className="italic font-bold">reflects you.</span>
-        </h2>
+        <p className="max-w-[280px] sm:max-w-2xl text-center h-auto font-normal text-black text-4xl md:text-5xl leading-tight">
+          We&apos;re building a smart journal that{" "}
+          <span className="font-heading italic font-bold">reflects you.</span>
+        </p>
       </div>
       <div className="flex flex-col justify-center items-center w-[92%] mx-auto py-0 sm:py-8">
         <EarlyAccess />

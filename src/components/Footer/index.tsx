@@ -16,9 +16,9 @@ const Footer = () => {
         height={112}
       />
 
-      <p className="w-full max-w-xl mb-4 sm:max-w-2xl h-auto mt-[-20px] sm:mt-[-34px] font-normal text-xl sm:text-6xl text-center">
+      <h3 className="w-full max-w-xl mb-4 sm:max-w-2xl h-auto mt-[-20px] sm:mt-[-34px] font-medium text-xl sm:text-5xl text-center">
         Midjournal
-      </p>
+      </h3>
 
       <div className="w-full font-normal text-black text-[10px] sm:text-base py-0 sm:py-4">
         <p className="text-center max-w-[280px] sm:max-w-[890px] mx-auto">
