@@ -106,8 +106,8 @@ export async function POST(req: NextRequest) {
 
     // Then, send the welcome email
     const imageDetails = {
-      logo_black: "midjournal-logo-black.png",
-      logo_white: "midjournal-logo-white.png",
+      logo_black: "midjournal-logo-black-bottom.png",
+      logo_white: "midjournal-logo-white-bottom.png",
       x_black: "x-black.png",
       x_white: "x-white.png",
       tiktok_black: "tiktok-black.png",
