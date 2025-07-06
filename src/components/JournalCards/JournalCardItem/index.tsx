@@ -52,7 +52,7 @@ const JournalCardItem = ({ card, i, rotate }: JournalCardItemProps) => {
               name={card.ellipseSrc.substring(1)}
               className="absolute top-[243px] left-[93.6px]"
             />
-            <div className="w-[41.6px] h-[33.6px] absolute top-[252px] left-[99.2px] text-[23.68px] font-normal text-black text-center">
+            <div className="w-[41.6px] h-[33.6px] absolute top-[250px] left-[98px] text-[23.68px] font-normal text-black text-center">
               {card.score}{" "}
             </div>
 
@@ -60,7 +60,7 @@ const JournalCardItem = ({ card, i, rotate }: JournalCardItemProps) => {
               &quot;{card.title}&quot;{" "}
             </div>
 
-            <div className="absolute top-[320px] left-[53.6px] w-[136px] h-[20px] text-[9.84px] font-normal text-black text-center">
+            <div className="absolute top-[321px] left-[53.6px] w-[136px] h-[20px] text-[9.84px] font-normal text-black text-center">
               {card.date}{" "}
             </div>
             <div className="absolute top-[344px] left-[53.6px] w-[136px] h-[20px] text-[7.92px] font-normal text-[#a1a1a1] text-center">
