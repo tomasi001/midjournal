@@ -18,7 +18,7 @@ const Description = () => {
           <span className="italic font-bold font-heading">Go deep.</span> For
           centuries journaling has served as a powerful way to increase
           self-awareness. Now imagine an enriching set of tools that enable you
-          to <br />
+          to <br className="hidden sm:block" />
           go deeper, understand yourself better, and take greater responsibility
           for how you engage with the world.
         </p>
@@ -28,9 +28,9 @@ const Description = () => {
           </span>{" "}
           Guided by the best in modern psychology and eastern wisdom; we&apos;re
           building a journal that draws from top academic research
-          <br />
+          <br className="hidden sm:block" />
           and learns with you as you go. Keeping track of your thoughts and
-          <br />
+          <br className="hidden sm:block" />
           emotions to reveal patterns and insights – in a way that helps make
           sense of the messiness of life.
         </p>
