@@ -5,6 +5,7 @@ import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { toast } from "sonner";
+import posthog from "posthog-js";
 
 const EarlyAccess = () => {
   const [email, setEmail] = useState("");
@@ -29,8 +30,10 @@ const EarlyAccess = () => {
         toast.success(
           "Success! NB: Please check your spam folder if you have not received a confirmation email."
         );
+        posthog.identify(email, { email: email });
         setEmail("");
       } else if (res.status === 409) {
+        posthog.identify(email, { email: email });
         toast.warning(data.message || "This email is already on the list.");
       } else {
         toast.error(data.message || "Something went wrong. Please try again.");
